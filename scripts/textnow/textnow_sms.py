@@ -185,6 +185,10 @@ class Textnow:
           driver.execute_script("setTimeout($(arguments[0]).click,2000)", "#send_button")
         time.sleep(5)
         
+        #注销账号
+        driver.execute_script('window.location.href="/logout"')
+        time.sleep(10)
+        
         #执行页面刷新
         #try:
         #  driver.get(self.url.replace('/login','/messaging'))
